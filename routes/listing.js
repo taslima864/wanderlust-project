@@ -7,6 +7,7 @@ const listingController = require("../controllers/listings.js");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware.js");
 const multer = require("multer");
 const { storage } = require("../cloudConfig.js");
+const { errors } = require("passport-local-mongoose");
 const upload = multer({ storage });
 
 /* ------------------ ROUTES ------------------ */
@@ -29,7 +30,10 @@ router.get("/new", isLoggedIn, listingController.renderNewForm);
 router
   .route("/:id")
   // SHOW route
+  
   .get(wrapAsync(listingController.showListing))
+  
+  
   // UPDATE route
   .put(
     isLoggedIn,
