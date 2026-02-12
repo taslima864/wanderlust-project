@@ -1,0 +1,22 @@
+<% if (success && success.length > 0) { %>
+<div class="row mt-3">
+  <div class="col-6 offset-3">
+    <div class="alert alert-success py-1 px-2 small"
+ role="alert">
+      <span><%= success %></span>
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<% if (error && error.length > 0) { %>
+<div class="row mt-3">
+  <div class="col-6 offset-3">
+    <div class="alert alert-danger py-1 px-2 small" role="alert">
+      <span><%= error %></span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<% } %>
