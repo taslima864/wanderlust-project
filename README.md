@@ -32,8 +32,8 @@ Passport.js (Authentication)
 
 Multer (Image Upload)
 
-Cloudinary (Image Hosting, if used)
+Cloudinary (Image Hosting)
 
-Map API (if used)
+Map API
 
 Git & GitHub
