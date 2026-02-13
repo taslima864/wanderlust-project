@@ -1,6 +1,8 @@
 const Listing = require("../models/listing");
 const geocode = require("../utils/geocode");
 
+
+
 //Index Page
 module.exports.index = async (req, res) => {
   const allListings = await Listing.find({});
